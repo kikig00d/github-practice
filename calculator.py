@@ -4,6 +4,9 @@ def add(a, b):
     return a + b
  
  
+def Hello():
+    print("안녕.")
+ 
 def subtract(a, b):
     """두 수를 뺀다."""
     return a - b
