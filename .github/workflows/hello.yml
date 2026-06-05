@@ -1,0 +1,19 @@
+name: Hello World
+ 
+# 언제 실행할지: main에 push될 때 + 수동 실행 버튼
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+ 
+jobs:
+  greet:
+    runs-on: ubuntu-latest          # 깃허브가 빌려주는 리눅스 가상머신
+    steps:
+      - name: Print a greeting
+        run: echo "Hello, GitHub Actions!"
+ 
+      - name: Show date and runner info
+        run: |
+          echo "현재 시각: $(date)"
+          echo "실행 환경: $RUNNER_OS"
