@@ -2,7 +2,12 @@
 def add(a, b):
     """두 수를 더한다."""
     return a + b
- 
+
+def divide(a, b):
+    """두 수를 나눈다. 0으로 나누면 오류."""
+    if b == 0:
+        raise ValueError("0으로 나눌 수 없습니다.")
+    return a / b
  
 def Hello():
     print("안녕.")
